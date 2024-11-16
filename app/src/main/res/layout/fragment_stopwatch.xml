@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_weight="1"
+    tools:context=".StopwatchFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="50dp"
+            android:text="Stopwatch"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="SmallSp" />
+
+        <ImageButton
+            android:id="@+id/clip_board"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/copy"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="150dp"
+
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        >
+
+        <!-- Circular Progress View for Stopwatch -->
+        <com.example.myapplication.StopwatchProgressView
+            android:id="@+id/circularProgressView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- TextView untuk menampilkan waktu stopwatch di tengah lingkaran -->
+        <TextView
+            android:id="@+id/tvStopwatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00.00"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:gravity="center"
+            tools:text="00:00.00" />
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLapTimes"
+        android:layout_width="348dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="30dp"
+        android:padding="16dp"
+        tools:ignore="InefficientWeight" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/reset" />
+
+        <ImageButton
+            android:id="@+id/btnStartStop"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/play"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/btnLap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="66dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/stopwatchicon" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
