@@ -3,10 +3,10 @@
     <item
         android:id="@+id/navigation_stopwatch"
         android:title="Stopwatch"
-        android:icon="@drawable/baseline_timer_24"/>
+        android:icon="@drawable/stopwatchicon"/>
     <item
         android:id="@+id/navigation_timer"
         android:title="Timer"
-        android:icon="@drawable/baseline_timer_24"/>
+        android:icon="@drawable/hour_glass"/>
 
 </menu>
